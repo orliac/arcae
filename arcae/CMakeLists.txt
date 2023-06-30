@@ -10,7 +10,7 @@ add_library(arrow_tables MODULE ${arrow_tables})
 target_link_libraries(arrow_tables arcae PkgConfig::casacore)
 target_link_directories(arrow_tables PUBLIC ${PYARROW_LIBDIRS})
 target_include_directories(arrow_tables PUBLIC
-    PkgConfig::casacore ${PYARROW_INCLUDE} ${NUMPY_INCLUDE}
+    PkgConfig::casacore ${PYTHON_INCLUDE} ${NUMPY_INCLUDE} ${PYARROW_INCLUDE}
     ${CMAKE_SOURCE_DIR}/cpp)
 target_compile_options(arrow_tables PUBLIC "-D_GLIBCXX_USE_CXX11_ABI=0")
 python_extension_module(arrow_tables)
