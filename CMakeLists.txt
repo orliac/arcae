@@ -21,7 +21,7 @@ if(CCACHE_FOUND)
 endif(CCACHE_FOUND)
 
 # VCPKG must be setup before the project command
-include(SetupVCPKG)
+#include(SetupVCPKG)
 
 project(arcae CXX)
 
